@@ -6,6 +6,7 @@ import Header from './components/Header/Header';
 import Details from './components/Details/Details';
 import Questions from './components/Questions/Questions';
 import { getBreakStoredTime, setBreakStoredTime } from './components/utilities/Exercisetime';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -54,6 +55,7 @@ function App() {
                 </div>
             </div>
         </div>
+            <Footer></Footer>
     </div>
   );
 }
