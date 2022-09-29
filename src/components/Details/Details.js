@@ -30,7 +30,7 @@ const Details = ({exerciseTime, getBreakTime, breakTime}) => {
                 <h6>Add a Break</h6>
                 <div className='d-flex justify-content-around text-center bg-light rounded p-3'>
                     <button onClick={()=> getBreakTime(10)} className='rounded-circle p-2 btn btn-outline-primary fw-semibold'>10s</button>
-                    <button onClick={()=> getBreakTime(20)} className='rounded-circle p-2 btn btn-outline-primary active fw-semibold'>20s</button>
+                    <button onClick={()=> getBreakTime(20)} className='rounded-circle p-2 btn btn-outline-primary  fw-semibold'>20s</button>
                     <button onClick={()=> getBreakTime(30)} className='rounded-circle p-2 btn btn-outline-primary fw-semibold'>30s</button>
                     <button onClick={()=> getBreakTime(40)} className='rounded-circle p-2 btn btn-outline-primary fw-semibold'>40s</button>
                     <button onClick={()=> getBreakTime(50)} className='rounded-circle p-2 btn btn-outline-primary fw-semibold'>50s</button>

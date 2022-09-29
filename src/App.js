@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import Header from './components/Header/Header';
 import Details from './components/Details/Details';
 import Questions from './components/Questions/Questions';
-import { getStoredTime } from './components/utilities/Exercisetime';
+import { getBreakStoredTime } from './components/utilities/Exercisetime';
 
 function App() {
   const [exercises, setExercises] = useState([]);
@@ -18,10 +18,6 @@ function App() {
     .then(data => setExercises(data))
   },[]);
   
-  useEffect( () =>{
-    getStoredTime(exerciseTime, breakTime);
-  },[exerciseTime, breakTime]);
-
   const getExerciseTime = (time) => {
     exerciseTime = exerciseTime + time;
     console.log(exerciseTime);
@@ -32,8 +28,9 @@ function App() {
     console.log(time);
     breakTime = time;
     setbreakTime(breakTime);
+    getBreakStoredTime(breakTime);
   }
-  getStoredTime(exerciseTime, breakTime);
+  
   return (
     <div className='bg-light'>
       <div className="container">
