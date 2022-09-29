@@ -1,7 +1,8 @@
 import React from 'react';
 import './Details.css';
 
-const Details = ({exerciseTime, getBreakTime, breakTime}) => {
+
+const Details = ({exerciseTime, getBreakTime, breakTime, getToast}) => {
     return (
         <div className=' position-sticky top-0 w-100'>
             <div className='details d-flex '>
