@@ -1,7 +1,8 @@
 import React from "react";
 
 const Cards = (props) => {
-  const { picture, time, name, about } = props.exercise;
+  const { picture, time, name, about} = props.exercise;
+  const { getExerciseTime } = props;
   return (
     <div>
         <div className="col">
@@ -15,7 +16,7 @@ const Cards = (props) => {
               <h6>For age: 15-20</h6>
               <h6>Time required: {time}s</h6>
             </div>
-            <button className="btn btn-primary">Add to list</button>
+            <button onClick={() => getExerciseTime(time)} className="btn btn-primary">Add to list</button>
           </div>
         </div>
       

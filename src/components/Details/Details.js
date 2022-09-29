@@ -1,7 +1,7 @@
 import React from 'react';
 import './Details.css';
 
-const Details = () => {
+const Details = ({exerciseTime, getBreakTime, breakTime}) => {
     return (
         <div className='mx-3 position-sticky top-0'>
             <div className='details d-flex '>
@@ -29,22 +29,22 @@ const Details = () => {
             <div className='my-3'>
                 <h6>Add a Break</h6>
                 <div className='d-flex justify-content-around text-center bg-light rounded p-3'>
-                    <button className='rounded-circle p-2 btn btn-outline-primary fw-semibold'>10s</button>
-                    <button className='rounded-circle p-2 btn btn-outline-primary active fw-semibold'>20s</button>
-                    <button className='rounded-circle p-2 btn btn-outline-primary fw-semibold'>30s</button>
-                    <button className='rounded-circle p-2 btn btn-outline-primary fw-semibold'>40s</button>
-                    <button className='rounded-circle p-2 btn btn-outline-primary fw-semibold'>50s</button>
+                    <button onClick={()=> getBreakTime(10)} className='rounded-circle p-2 btn btn-outline-primary fw-semibold'>10s</button>
+                    <button onClick={()=> getBreakTime(20)} className='rounded-circle p-2 btn btn-outline-primary active fw-semibold'>20s</button>
+                    <button onClick={()=> getBreakTime(30)} className='rounded-circle p-2 btn btn-outline-primary fw-semibold'>30s</button>
+                    <button onClick={()=> getBreakTime(40)} className='rounded-circle p-2 btn btn-outline-primary fw-semibold'>40s</button>
+                    <button onClick={()=> getBreakTime(50)} className='rounded-circle p-2 btn btn-outline-primary fw-semibold'>50s</button>
                 </div>
             </div>
             <div className='my-3'>
                 <h6>Exercise Details</h6>
                 <div className='d-flex align-items-center justify-content-between bg-light rounded p-3 my-2'>
                     <p className='fw-semibold'>Exercise Time</p>
-                    <span className='text-muted'>0 <span className='text-muted'>seconds</span></span>
+                    <span className='text-muted'>{exerciseTime} <span className='text-muted'>seconds</span></span>
                 </div>
                 <div className='d-flex align-items-center justify-content-between bg-light rounded p-3 my-2'>
                     <p className='fw-semibold'>Break Time</p>
-                    <span className='text-muted'>0 <span className='text-muted'>seconds</span></span>
+                    <span className='text-muted'>{breakTime} <span className='text-muted'>seconds</span></span>
                 </div>
             </div>
             <button className="btn btn-primary w-100">Activity Completed</button>
