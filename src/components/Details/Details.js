@@ -6,7 +6,7 @@ const Details = ({exerciseTime, getBreakTime, breakTime, getToast}) => {
     return (
         <div className=' position-sticky top-0 w-100'>
             <div className='details d-flex '>
-                <img src="https://www.summitcl.com/wp-content/uploads/2019/06/female-avator-370x400.png" alt="" />
+                <img src="https://static.vecteezy.com/system/resources/previews/004/773/704/original/a-girl-s-face-with-a-beautiful-smile-a-female-avatar-for-a-website-and-social-network-vector.jpg" alt="" />
                 <div className='mt-5'>
                     <h6>Iffat Nur Shad</h6>
                     <i class="fa-solid fa-location-dot"></i><span> Chittagong, Bangladesh</span>
