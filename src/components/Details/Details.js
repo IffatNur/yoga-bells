@@ -12,6 +12,12 @@ const Details = ({exerciseTime, getBreakTime, breakTime, getToast}) => {
                     <i class="fa-solid fa-location-dot"></i><span> Chittagong, Bangladesh</span>
                 </div>
             </div>
+            <div className='my-3 p-3 bg-light rounded'>
+                <p className='fw-bold'>Pre-requisite:</p>
+                <li>The person must be of age: 15-20 years</li>
+                <li>The person should weight minimum: 40kg</li>
+                <li>The height should be minimum: 5 feet</li>
+            </div>
             <div className='d-flex justify-content-around my-auto text-center bg-light rounded'>
                 <div className='other '>
                     <h3>75kg</h3>
