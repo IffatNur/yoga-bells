@@ -4,6 +4,7 @@ import Cards from './components/Cards/Cards';
 import { useEffect, useState } from 'react';
 import Header from './components/Header/Header';
 import Details from './components/Details/Details';
+import Questions from './components/Questions/Questions';
 
 function App() {
   const [exercises, setExercises] = useState([]);
@@ -17,14 +18,15 @@ function App() {
     <div className='bg-light'>
       <div className="container">
             <div className="row">
-                <div className="col-md-8">
+                  <div className="col-md-8">
                     <Header></Header>
-                  <div className="row row-cols-1 row-cols-md-3 g-4">
-                    {
-                      exercises.map(exercise => <Cards key={exercise.id} exercise={exercise}></Cards>)
-                    }
+                    <div className="row row-cols-1 row-cols-md-3 g-4">
+                      {
+                        exercises.map(exercise => <Cards key={exercise.id} exercise={exercise}></Cards>)
+                      }
+                    </div>
+                      <Questions></Questions>
                   </div>
-                </div>
                 <div className="col-6 col-md-4 bg-white">
                   <Details></Details>
                 </div>

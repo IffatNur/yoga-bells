@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../Header/Header";
 
 const Cards = (props) => {
   const { picture, time, name, about } = props.exercise;
