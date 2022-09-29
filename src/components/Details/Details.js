@@ -3,7 +3,7 @@ import './Details.css';
 
 const Details = ({exerciseTime, getBreakTime, breakTime}) => {
     return (
-        <div className='mx-3 position-sticky top-0'>
+        <div className=' position-sticky top-0 w-100'>
             <div className='details d-flex '>
                 <img src="https://www.summitcl.com/wp-content/uploads/2019/06/female-avator-370x400.png" alt="" />
                 <div className='mt-5'>
@@ -11,16 +11,16 @@ const Details = ({exerciseTime, getBreakTime, breakTime}) => {
                     <i class="fa-solid fa-location-dot"></i><span> Chittagong, Bangladesh</span>
                 </div>
             </div>
-            <div className='d-flex justify-content-around text-center bg-light rounded'>
-                <div className='other m-2'>
+            <div className='d-flex justify-content-around my-auto text-center bg-light rounded'>
+                <div className='other '>
                     <h3>75kg</h3>
                     <p>Weight</p>
                 </div>
-                <div className='other m-2'>
+                <div className='other '>
                     <h3>6.5</h3>
                     <p>Height</p>
                 </div>
-                <div className='other m-2'>
+                <div className='other '>
                     <h3>25yrs</h3>
                     <p>Age</p>
                 </div>

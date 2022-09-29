@@ -1,4 +1,5 @@
 import React from "react";
+import './Cards.css';
 
 const Cards = (props) => {
   const { picture, time, name, about} = props.exercise;

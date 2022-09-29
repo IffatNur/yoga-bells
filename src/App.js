@@ -1,11 +1,11 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Cards from './components/Cards/Cards';
 import { useEffect, useState } from 'react';
 import Header from './components/Header/Header';
 import Details from './components/Details/Details';
 import Questions from './components/Questions/Questions';
-import { getBreakStoredTime } from './components/utilities/Exercisetime';
+import { getBreakStoredTime, setBreakStoredTime } from './components/utilities/Exercisetime';
 
 function App() {
   const [exercises, setExercises] = useState([]);
@@ -18,6 +18,11 @@ function App() {
     .then(data => setExercises(data))
   },[]);
   
+  useEffect( ()=>{
+    const storedTime  = getBreakStoredTime();
+    setbreakTime(storedTime.time);
+  },[breakTime])
+
   const getExerciseTime = (time) => {
     exerciseTime = exerciseTime + time;
     console.log(exerciseTime);
@@ -25,10 +30,9 @@ function App() {
   }
   
   const getBreakTime = (time) =>{
-    console.log(time);
     breakTime = time;
     setbreakTime(breakTime);
-    getBreakStoredTime(breakTime);
+    setBreakStoredTime(breakTime);
   }
   
   return (
@@ -37,14 +41,14 @@ function App() {
             <div className="row">
                   <div className="col-md-8">
                     <Header></Header>
-                    <div className="row row-cols-1 row-cols-md-3 g-4">
+                    <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                       {
                         exercises.map(exercise => <Cards key={exercise.id} exercise={exercise} getExerciseTime={getExerciseTime}></Cards>)
                       }
                     </div>
                       <Questions></Questions>
                   </div>
-                <div className="col-6 col-md-4 bg-white">
+                <div className="col-12 col-md-4 bg-white">
                   <Details exerciseTime={exerciseTime} getBreakTime={getBreakTime} breakTime={breakTime}></Details>
                 </div>
             </div>
